@@ -27,25 +27,15 @@ module.exports = defineConfig({
   } 
 }); 
 
-// const crypto = require("crypto");
+// const { defineConfig } = require("cypress");
 
-// module.exports = {
+// module.exports = defineConfig({
 //   e2e: {
-//     setupNodeEvents(on, config) {
-//       // PKCE Code Generator
-//       on("task", {
-//         generatePKCECodes() {
-//           const code_verifier = crypto.randomBytes(32).toString("base64url");
-//           const code_challenge = crypto
-//             .createHash("sha256")
-//             .update(code_verifier)
-//             .digest("base64url");
-
-//           return { code_verifier, code_challenge };
-//         }
-//       });
-
-//       return config;
-//     },
+//     baseUrl: "https://myridius16-dev-ed.develop.lightning.force.com/",
+//     testIsolation: false, 
+//     testIsolation: false,        // Keeps session active
+//     chromeWebSecurity: false,    // Prevent Salesforce iframe/security issues
+//     experimentalSessionAndOrigin: true,   //  Prevents page reset between tests
 //   },
-// };
+// });
+
